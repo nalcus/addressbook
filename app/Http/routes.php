@@ -40,7 +40,7 @@ Route::post('/contact', function (Request $request) {
     ]);
 
     if ($validator->fails()) {
-        return redirect('create')
+        return redirect('contacts.create')
             ->withInput()
             ->withErrors($validator);
     }
